@@ -9,13 +9,13 @@
     <!-- 폰트 - 나눔스퀘어 -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
 
+   
     <!-- 이미지 슬라이드 플러그인 -->
     <link rel="stylesheet" href="css/slick.css">
-
     <!-- css -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- script -->
+    <!-- jQuery -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <!-- 스크롤 인터랙션 플러그인 -->
     <script src="js/scrolla.jquery.min.js"></script>
@@ -143,16 +143,18 @@
         <!-- section - about -->
         <section class="about">
             <img src="img/main2_bg.jpg" alt="">
-            <!-- data-animatie: 플러그인에 연결된 애니메이션 이름, 
+            <!-- data-animate: 플러그인에 연결된 애니메이션 이름, 
                 스크롤 영역에 왔을 때, 적용될 class 이름을 적으면 됨-->
             <div class="inner animate" data-animate="motion">
                 <h2>글로벌 컨시어지 서비스와 함께 하세요</h2>
-                <ul class="line">
+                <div class="line">
                     <span></span>
-                    <li class="a"></li>
-                    <li class="b"></li>
-                    <li class="c"></li>
-                </ul>
+                    <ul>
+                        <li class="a"></li>
+                        <li class="b"></li>
+                        <li class="c"></li>
+                    </ul>
+                </div>
                 <ul>
                     <li>
                         <h3>Our Solutions</h3>
@@ -185,8 +187,8 @@
                 <h2>프리미엄 멤버쉽</h2>
                 <p>프리미엄 멤버십은 귀하만을 위한 컨시어지 서비스를 제공합니다. <br>
                 귀하에게 최고의 삶을 선물하세요.
-            </p>
-            <a href="">more</a>
+                </p>
+                <a href="#">more</a>
             </div>
 
             <ul class="banner">
@@ -201,7 +203,7 @@
             <div class="title">
                 <h2>Global Concierge Services</h2>
                 <p>글로벌 컨시어지 서비스를 통해<br>
-                귀사와 귀하에게 필요한 서비스를 필요한만큼만 활용하세요
+                귀사와 귀하에게 필요한 서비스를 필요한만큼만 활용하세요.
                 </p>
                 <ul>
                     <li>
@@ -255,14 +257,10 @@
             </ul>
             <div class="box animate" data-animate="motion">
                 <h2>전세계 어디든 나만의 컨시어지가 있다.<br>
-                   For Your Business & Life</h2>
+                For Your Business & Life</h2>
             </div>
         </footer>
 
-
-
     </div>
-    
-
 </body>
 </html>

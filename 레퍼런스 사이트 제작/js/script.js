@@ -18,7 +18,46 @@ $(function() {
        
    })
    
-   
-   
-   
+    //  모바일 네비게이션 
+
+    $('header .open').on('click', function() {
+        $('body').css({ 'overflow' : 'hidden' })
+        // $('header .bg').css({'display' : 'block'})
+        $('header .bg').fadeIn();
+        $('header nav').addClass('on')
+        $('header nav').css({'width':'300px'})
+
+    })
+    
+     // x 버튼 이벤트
+
+     $('header .close, header .bg').on('click', function() {
+        $('body').css({ 'overflow' : 'auto' })
+        // $('header .bg').css({'display' : 'none'})
+        $('header .bg').fadeOut();
+        $('header nav').removeClass('on')
+        $('header nav').css({'width':'0%'})
+    })
+    
+
+    // 헤더 스크롤 배경 넣기
+    let scrollValue = 0
+    scrollValue = $(document).scrollTop()
+
+    
+    function fixHeader() {
+        //스크롤 위치가 200픽셀 초과하면 배경넣어주기
+        if( scrollValue > 200 ) {
+            $('header').addClass('on')
+        } else {
+            $('header').removeClass('on')
+        }
+    }
+
+    // 스크롤 위치 감지 이벤트
+    $(window).on('scroll resize', function() {
+        scrollValue = $(document).scrollTop()
+        fixHeader()
+    })
+
 })

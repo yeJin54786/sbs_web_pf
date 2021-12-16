@@ -1,0 +1,14 @@
+
+header {width: 100%; height: 64px; z-index: 100; position: fixed; top: 0; left: 0; display: flex; }
+.header_wrap {width: 90%; height: 64px; position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: space-between;}
+header .header_svg {width: 130px;}
+
+.gnb {width: 468px; display: flex; align-items: center; justify-content: space-between; color: #fff; font-size:16px; font-weight: 999;}
+header .gnbwrap .sb2_nav {display: none;}
+header .gnbwrap .sb3_nav {display: none;}
+.header_util {display: flex; align-items: center; justify-content: center;}
+.header_option {width: 64px; text-align: center;}
+.header_option button {color: #fff; background: none; border: none; font-weight: 700;}
+.fa-angle-down {color: #fff;}
+.header_option2 {display: none;}
+.fa-search {padding-left: 10px;}

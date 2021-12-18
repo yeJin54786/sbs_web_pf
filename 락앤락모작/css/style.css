@@ -1,14 +1,41 @@
 
 header {width: 100%; height: 64px; z-index: 100; position: fixed; top: 0; left: 0; display: flex; }
-.header_wrap {width: 90%; height: 64px; position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: space-between;}
 header .header_svg {width: 130px;}
+.header_wrap {width: 100%; height: 64px; position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: space-around;}
+.header_wrap:hover { background-color: #fff; transition: all 0.5s; border-bottom: 1px solid #ccc;}
+.header_wrap:hover a, .header_wrap:hover button, .header_wrap:hover i { color: black; }
 
-.gnb {width: 468px; display: flex; align-items: center; justify-content: space-between; color: #fff; font-size:16px; font-weight: 999;}
+.gnb { position: relative; width: 468px; height: 64px; display: flex; justify-content: space-around; color: #fff; font-size:16px; font-weight: 999; text-align: center;}
+.gnb li { display: block; width: 100%; line-height: 4;}
+.gnb > span { position: absolute; left: 0; bottom: 0; height: 3px; width: 100px; z-index: 2; background: #000; opacity: 0; transition: all 2s;}
+.gnb a:nth-child(1).on ~ span {left: 0; opacity: 1;}
+.gnb a:nth-child(2).on ~ span {left: 100px; opacity: 1;}
+.gnb a:nth-child(3).on ~ span {left: 200px; opacity: 1;}
+.gnb a:nth-child(4).on ~ span {left: 300px; opacity: 1;}
+.gnb a:nth-child(5).on ~ span {left: 400px; opacity: 1;}
+
+
 header .gnbwrap .sb2_nav {display: none;}
 header .gnbwrap .sb3_nav {display: none;}
 .header_util {display: flex; align-items: center; justify-content: center;}
-.header_option {width: 64px; text-align: center;}
+.header_option {width: 64px; text-align: center;} 
 .header_option button {color: #fff; background: none; border: none; font-weight: 700;}
 .fa-angle-down {color: #fff;}
 .header_option2 {display: none;}
 .fa-search {padding-left: 10px;}
+
+
+.visual {position: relative; width: 100%; color: #fff;}
+.visual .con { position: absolute; bottom: 39%; left: 16%;}
+.visual .bg img {width: 100%;}
+.visual h2 { font-size:65px; font-weight: 900; letter-spacing:-4px;}
+.visual .con > span {font-weight: 900; font-size: 20px; display: block; margin-top: 30px;}
+.visual .con >  a { font-weight: 700; font-size: 16px; border: 1px solid #fff; padding: 15px 28px; margin-top: 30px; display: inline-block;}
+
+
+section.content {width: 100%; position: relative;}
+section.content .bg img {width: 100%;}
+section.content .txt {position: absolute; bottom: 30%; left: 16%;}
+section.content h2 {color: #000; font-size: 50px; font-weight: 900; letter-spacing: -1px; line-height: 1.3;}
+section.content span { margin-top: 17px; font-weight: 500; color: #000; font-size: 18px; display: block; line-height: 1.3;}
+section.content a {color: #000; font-weight: 700; font-size: 16px; border: 1px solid #000; padding: 15px 28px; margin-top: 30px; display: inline-block;}

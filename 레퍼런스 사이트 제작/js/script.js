@@ -1,63 +1,67 @@
+$(function () {
 
-$(function() {
-    // 스크롤 애니메이션
-   $('.animate').scrolla({
-       mobile: true, // 모바일 버전 활성화
-       once: false // true: 한번만, false : 계속
-   }) 
-
-   // 슬라이드
-   $('.visual .slide').slick({
-       arrows: false,           // 화살표 사용 여부
-       dots: true,              // 네비게이션 사용 여부
-       autoplay: true,          // 자동재생
-       fade: true,              // 페이드인 효과
-       autoplaySpeed: 5000,     // 재생시간 5000ms = 5초
-       pauseOnHover: false,     // 마우스 오버 시 멈춤 여부
-       pauseOnFocus: false,     // 포커스 시 멈춤 여부
-       
-   })
-   
-    //  모바일 네비게이션 
-
-    $('header .open').on('click', function() {
-        $('body').css({ 'overflow' : 'hidden' })
-        // $('header .bg').css({'display' : 'block'})
-        $('header .bg').fadeIn(1500);
-        $('header nav').addClass('on')
-        $('header nav').css({'width':'300px'})
-
+    $('header').on('mouseover', () => {
+        $('.header_svg path').attr('fill', '#000')
     })
-    
-     // x 버튼 이벤트
 
-     $('header .close, header .bg').on('click', function() {
-        $('body').css({ 'overflow' : 'auto' })
-        // $('header .bg').css({'display' : 'none'})
-        $('header .bg').fadeOut(1500);
-        $('header nav').removeClass('on')
-        $('header nav').css({'width':'0%'})
+    $('header').on('mouseout', () => {
+        $('.header_svg path').attr('fill', '#fff')
     })
-    
 
-    // 헤더 스크롤 배경 넣기
-    let scrollValue = 0
-    scrollValue = $(document).scrollTop()
 
-    
-    function fixHeader() {
-        //스크롤 위치가 200픽셀 초과하면 배경넣어주기
-        if( scrollValue > 200 ) {
-            $('header').addClass('on')
-        } else {
-            $('header').removeClass('on')
+    // 스크롤 감지
+    // 이전 스크롤 위치
+    let lastScrollTop = 0
+    $(window).on('scroll resize', function(){
+        // 현재 스크롤 위치
+        let scrollTop = $(document).scrollTop()
+
+        console.log(scrollTop);
+        if( scrollTop == 0 ) {
+            $('.header_wrap').removeClass('on')
         }
-    }
 
-    // 스크롤 위치 감지 이벤트
-    $(window).on('scroll resize', function() {
-        scrollValue = $(document).scrollTop()
-        fixHeader()
-    })
+        if( scrollTop > lastScrollTop ) {
+            // 스크롤 아래로
+            $('.header_wrap').addClass('on')
+            $('header').slideUp()
+        } else {
+            // 스크롤 위로
+            $('header').slideDown()
+        }
+
+        lastScrollTop = scrollTop
+    });
+
+    //라운지 슬라이더
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 50,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'progressbar',                // 'bullets'        : • • • 
+                                            // 'fraction'       : (현재번호/전체번호) 
+                                            // 'progressbar'    : 진행률(게이지)
+                                            // 'custom'         
+          clickable: true,                // 페이지 네이션 클릭 가능 여부
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
 
 })

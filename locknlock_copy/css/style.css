@@ -1,0 +1,197 @@
+
+/* swiper */
+.swiper { width: 600px; height: 300px;}
+
+/* 헤더 */
+header {width: 100%; height: 64px; z-index: 100; position: fixed; top: 0; left: 0; display: flex; }
+header .header_svg {width: 130px;}
+.header_wrap {width: 100%; height: 64px; position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: space-around;   transition: all 0.5s;}
+.header_wrap:hover { background-color: #fff; transition: all 0.5s; border-bottom: 1px solid #ccc;}
+.header_wrap:hover a, .header_wrap:hover button, .header_wrap:hover i { color: black; }
+
+.header_wrap.on { background-color: #fff; transition: all 0.5s; border-bottom: 1px solid #ccc;}
+.header_wrap.on a, .header_wrap.on button, .header_wrap.on i { color: black; }
+
+.gnb { position: relative; width: 468px; height: 64px; display: flex; justify-content: space-around; color: #fff; font-size:16px; font-weight: 999; text-align: center;}
+.gnb li { display: block; width: 100%; line-height: 4;}
+.gnb li:hover > .subwrap ul { display: flex; }
+.gnb li:hover > .subwrap .sub_bg { display: block; }
+
+/* gnb 하단 바 */
+.gnb > span { position: absolute; left: 0; bottom: 0; height: 3px; width: 100px; z-index: 2; background: #000; opacity: 0; transition: all 2s;}
+.gnb a:nth-child(1).on ~ span {left: 0; opacity: 1;}
+.gnb a:nth-child(2).on ~ span {left: 100px; opacity: 1;}
+.gnb a:nth-child(3).on ~ span {left: 200px; opacity: 1;}
+.gnb a:nth-child(4).on ~ span {left: 300px; opacity: 1;}
+.gnb a:nth-child(5).on ~ span {left: 400px; opacity: 1;}
+
+/* 2뎁스메뉴 */
+.gnb ul {display: none;}
+.gnb .subwrap { position: absolute; top: 64px; left: 0; right: 0;  }
+.gnb .subwrap > ul {display: none; justify-content: flex-start; width: 100%; height: 100%;}
+.gnb .subwrap > ul:hover { display: flex; }
+.gnb .subwrap > ul.on { display: flex; }
+.gnb .subwrap > ul > li { width: auto; margin-right: 20px; }
+.gnb .subwrap > ul .sub_bg { position: fixed; top: 65px; left: 0; width: 100%; height: 100%; background-color: #fff; display: none; z-index: -1; }
+.gnb .subwrap > ul .sub_bg.on { display: block; }
+
+
+
+/* 헤더 우측버튼들 */
+.header_util {display: flex; align-items: center; justify-content: center;}
+.header_option {width: 64px; text-align: center;} 
+.header_option button {color: #fff; background: none; border: none; font-weight: 700;}
+.fa-angle-down {color: #fff;}
+.header_option2 {display: none;}
+.fa-search {padding-left: 10px;}
+
+/* 플로팅버튼 */
+.floatmall_menu {position: fixed; bottom: 2%; right: 2%; z-index: 1;}
+.floatmall_menu img {width: 110px;}
+
+/* 비주얼 */
+.visual {position: relative; width: 100%; color: #fff;}
+.visual .con { position: absolute; bottom: 39%; left: 16%;}
+.visual .bg img {width: 100%;}
+.visual h2 { font-size:65px; font-weight: 900; letter-spacing:-4px;}
+.visual .con > span {font-weight: 900; font-size: 20px; display: block; margin-top: 30px;}
+.visual .con >  a { color: #fff; font-weight: 700; font-size: 16px; border: 1px solid #fff; padding: 15px 28px; margin-top: 30px; display: inline-block;}
+
+
+/* 섹션 */
+section { font-size: 0;}  /* 알수 없는 공백 제거 */
+section.content {width: 100%; position: relative;}
+section.content .bg img {width: 100%;}
+section.content .txt {position: absolute; bottom: 30%; left: 16%;}
+section.content h2 {color: #000; font-size: 50px; font-weight: 900; letter-spacing: -1px; line-height: 1.3;}
+section.content span { margin-top: 17px; font-weight: 500; color: #000; font-size: 18px; display: block; line-height: 1.3;}
+
+
+/* 더보기 버튼1 */
+.more {color: #000; font-weight: 700; font-size: 16px; border: 1px solid #000; padding: 15px 28px; margin-top: 30px; display: inline-block;}
+
+/* 더보기 버튼2 */
+.morebt {width: 35px; height: 35px; display: inline-block; border: 1px solid black; }
+.morebt span {color: black; font-size: 26px; font-weight: normal; padding-left: 9px; }
+
+
+/* 뉴스 */
+section.news {width: 1130px; margin: 90px auto; position: relative}
+.newsmore {position: absolute; right: 0; top: 24px;}
+section.news h1 {font-size:3.8rem; font-weight: bolder; letter-spacing: -3px;}
+section.news .newslist {display: flex; width: 100%; margin-top: 40px; justify-content: space-between;}
+section.news .newslist li {width: 30%;}
+section.news img {display: block; width: 336px; height: 219px; overflow: hidden;}
+section.news .badge {padding: 10px 5px; background-color: rgb(70, 67, 67); display: inline-block; color: #fff; font-size: 15px; margin-top: 10px;   }
+section.news .title {font-size: 22px;font-weight: 600; letter-spacing: -3px; display: block; width: 90%; line-height: 1.4; margin-top: 11px;}
+section.news .tagbox {display: flex; flex-flow: row wrap;}
+section.news .tagbox span {font-size: 14px; color: rgb(117, 117, 117); margin-top: 10px;}
+section.news .date {font-size: 14px; color: rgb(170, 170, 170); margin-top: 15px; display: inline-block;}
+
+
+/* 라운지 */
+section.lounge {width: 100%; margin: 90px auto; background-color: rgb(230, 230, 230);}
+section .lounge_box {width: 1130px; position: relative; margin: 0 auto;}
+.loungemore {position: absolute; right: 0; top: 120px;}
+section.lounge h1 {font-size:3.8rem; font-weight: bolder; letter-spacing: -3px; margin-top: 90px; display: inline-block;}
+
+/* 라운지 슬라이더 */
+.lounge_swiper {width: 1130px; height: 709px; margin: 60px 0 60px 0; display: inline-block;}
+.lounge_swiper img {width: 1130px; height: 635px;}
+section.lounge .swiper-horizontal>.lounge_swiperbar {left: 0; bottom: 27px; width: 80%; }
+section.lounge .swiper-scrollbar-drag {}
+section.lounge .swiper-button-next, .swiper-button-prev { top: 95%; color: #000; }
+.swiper-button-prev, .swiper-rtl .swiper-button-next {left: 88%;}
+.swiper-pagination-progressbar { width: 80% !important; height: 4px; left: 0; top: auto !important; bottom: 27px !important;}
+.swiper-pagination-progressbar-fill { background-color: black !important;}
+
+
+/* 커리어  */
+section.career {width: 100%; margin: 90px 0 90px 0;}
+.career_contact_box {width: 1130px; margin: 0 auto; display: flex; flex-flow: row; justify-content: space-between;}
+section.career h2 {font-size:2.8rem; font-weight: bolder; letter-spacing: -3px; padding-top: 40px; }
+
+.career_wrap {position: relative; width: 535px;}
+.career_more {position: absolute; top: 46px; right: 0;}
+section.career .calist {margin-top: 40px; width: 100%; display: flex; flex-flow: column wrap;}
+section.career .calist li { font-size: 20px; border-top: 1px solid rgb(180, 180, 180);}
+section.career .calist li:nth-child(3) {border-bottom: 1px solid rgb(180, 180, 180);}
+section.career .calist li h4 {font-weight: 900; margin-top: 30px; letter-spacing: -1px; }
+section.career .calist li .title { font-weight: 400; margin: 15px 0 30px 0; display: inline-block; letter-spacing: -1px; }
+section.career .calist li .limit {font-weight: 200; padding-right: 20px;}
+section.career .calist li .type {font-weight: 200; float: right; padding-right: 20px;}
+
+
+.contact_wrap {position: relative; width: 535px; background-color: rgb(241, 241, 241);}
+section.career .contact_wrap > h2 { margin-left: 50px;}
+.contact_more {position: absolute; top: 46px; right: 50px;}
+.help_box { font-size: 20px; width: 83%; display: flex; flex-flow: column wrap; margin: 40px auto 0 ;}
+section.career .help { border-top: 1px solid rgb(180, 180, 180);}
+section.career .help .title {font-weight: 800; padding-top: 30px; display: inline-block; letter-spacing: -1px;}
+section.career .help .txt { font-size: 18px; display: inline-block; letter-spacing: -1px; padding-top: 20px;}
+section.career .help button { position: absolute; right: 50px; border: none; padding: 15px 30px; color: white; background-color: #000; font-size: 16px; }
+
+section.career .help2 {padding-top: 50px;}
+section.career .help2 .title {font-weight: 800;  display: inline-block; letter-spacing: -1px;}
+section.career .help2 .helptagbox { margin-top: 20px; }
+section.career .help2 .helptagbox .category { display: inline-block; margin: 7px 5px; color: #000; font-size: 16px; padding: 10px ; border: 1px solid #000; border-radius: 3px; }
+section.career .help2 .helptagbox .category:nth-child(1) { color: #000; font-size: 16px; padding: 10px ; border: 1px solid #000; border-radius: 3px; }
+
+
+
+/* 컴퍼니 */
+
+section.company { width: 100%; height: 450px; }
+section.company .bg {position: relative; width: 100%; height: 450px; background-color: cornflowerblue; background: url('../img/banner-lg.jpg') no-repeat center; background-size: cover;} 
+section.company h4 { position: absolute; top: 30% ; left: 10%; font-size: 28px; color: #fff; font-weight: 900; line-height: 40px; letter-spacing: -1px;}
+section.company .bg > .more {position: absolute; top: 46% ; left: 10%;  border: 1px #fff solid; color: #fff;}
+
+
+/* sns now */
+
+section.now {width: 100%;}
+section.now .now_wrap {width: 1130px; margin: 0 auto; position: relative; margin: 90px auto;}
+section.now h1 {font-size:3.8rem; font-weight: bolder; letter-spacing: -3px;}
+.nowmore {position: absolute; right: 0; top: 9px;}
+.snsbox {  width: 100%; display: flex; flex-flow: row wrap; margin-top: 30px; }
+.snsbox .instabox {width: 30%;  margin-right: 5%; margin-bottom: 5%; position: relative; overflow: hidden;}
+.snsbox .instabox:nth-child(3) {margin-right: 0;}
+.snsbox .instabox:nth-child(6) {margin-right: 0;}
+.snsbox .instabox img {width: 100%; text-align: center; display: inline-block;}
+.snsbox .instabox .now_insta { font-size: 45px; color: #fff; position: absolute; bottom:16px; right: 29px;}
+
+
+/* 푸터 */
+footer {width: 100%; border-top: 1px solid rgb(180, 180, 180);}
+.footer_wrap {width: 1300px; margin: 90px auto; display: flex; flex-flow: row wrap;  justify-content: space-between; position: relative; }
+.footer_infobox{width: 30%;}
+.footerlogo {display: block; width: 146px;}
+.footer_wrap .top { position: absolute; top: 0; right: 0; width: 40px; height: 40px; background-color: black; }
+.footer_wrap i {text-align: center; line-height: 2.5; font-size: 16px; display: block;}
+.footerInfo { margin-top: 35px;}
+.footerInfo address, .footerInfo .copy {font-size: 14px; color: rgb(110 110 110); margin-top: 10px; }
+.footerInfo .copy {margin-top: 14px; display: inline-block;}
+.footerInfo .shop_box { margin-top: 30px; }
+.footerInfo .shop_box a { font-size: 15px; color: black; font-weight: 900; padding-right: 10px; }
+.footerInfo .shop_box i { font-size: 15px; color: black; font-weight: 900; display: inline-block;}
+.footerInfo .shop_box .mall > i:before {border-right: 1px solid rgb(185 185 185); padding-right: 10px;}
+.footerInfo .snsIcon {display: flex; width: 50%; justify-content: space-between;}
+.footerInfo .snsIcon li i { color: #000; font-size: 30px;}
+
+
+.footerNav {width:70%; display: flex; justify-content: flex-start;}
+.footerNav ul {padding-left: 55px;}
+.footerNav ul:nth-child(1) {padding-left: 0;}
+.footerNav ul .bold_title a {font-size: 15px; color: black; font-weight: 800; display: inline-block; margin: 0 0 15px 0;}
+.footerNav ul li a {font-size: 14px; color: #000; margin-top: 24px; display: inline-block; letter-spacing: -1px;}
+
+.footersite {display: flex; width: 1300px; flex-flow: row nowrap; justify-content: space-between; margin: 0 auto;}
+.footersite .footerlist {width: 559px; display: flex; justify-content: space-between; line-height: 4;}
+.footersite .footerlist li {display: block;}
+.footersite .footerlist li a {font-size: 15px; color: #000; font-size: 15px; border-right: 1px solid #ccc; padding-right: 10px;} 
+.footersite .footerlist li a:nth-child(6) {border-right: none; padding-right:0;}
+
+.sitemap_toggle {width: 210px;}
+.sitemap_toggle .sitemap { width: 100%; border-bottom: 1px solid #ccc;  padding: 15px 0; display: inline-block; text-align: start; background-color: #fff;  }
+.sitemap_toggle .sitemap i {display: inline-block; float: right;  }
+

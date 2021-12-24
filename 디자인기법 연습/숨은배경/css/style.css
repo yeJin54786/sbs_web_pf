@@ -1,0 +1,25 @@
+
+
+
+header {width: 100%; min-height: 64px; background-color: rgb(98, 55, 122);}
+
+
+section {width: 1200px; min-height: 300px; background-color: rgb(109, 94, 121); margin: 0% auto;}
+
+
+
+section.bg {
+    width: 100% !important;
+    min-height: 600px;
+    position: relative;
+    /* background: url(../img/main_bg.jpg) center center no-repeat fixed; */
+    background-image: url(../img/andrew-haimerl-andrewnef-BQDI6pEs7I0-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* 숨은 배경 적용 포인트 */
+    /* 스크롤 시, 배경 이미지를 스크롤할지 고정할지 여부를 지정하는 속성 */
+    /* fixed , scroll */
+    background-attachment:fixed ;
+    background-size: cover;
+    color: #000;
+}

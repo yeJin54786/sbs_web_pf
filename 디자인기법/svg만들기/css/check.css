@@ -1,0 +1,20 @@
+@keyframes play180 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -36000px 0px;
+  }
+}
+.svg {
+  animation-duration: 3000ms;
+  animation-timing-function: steps(180);
+  /* 애니메이션 마지막 프레임에서 멈춤 */
+  animation-fill-mode: forwards;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+}
+.svg.animate__animated {
+  animation-name: play180;
+}

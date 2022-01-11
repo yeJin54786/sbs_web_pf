@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'KoPubDotumMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {background-color: #DFDCCF;}
+
+header {width: 100%; height: 118px; border: 1px solid #707070; box-sizing: border-box; background-color: #DFDCCF;}
+.header-wrap {width: 1523px; margin: 0 auto;}
+.header-logo span {display: block; margin-top: 17px; float: left; font-family: 'Titan One'; font-size: 74px; text-transform: capitalize; letter-spacing: -3.7px;}
+
+header nav {float: right; display: flex; margin-top: 44px;}
+header .gnb {display: flex; flex-flow: row nowrap; width: 794px; justify-content: space-between; padding-right: 80px;}
+header .gnb a {font-family: 'KoPubDotumMedium'; font-weight: bold; font-size: 28px; color: #000;}
+header .fa-magnifying-glass {font-size: 30px;}
+
+/* visual */
+section {margin: 0 auto; width: 1523px; margin-top: 76px;}
+section .main-title {position: absolute; z-index: 2; font-family: 'Titan One'; font-size: 111px; letter-spacing: -5.55px;}
+.visual-box {z-index: 1; display: flex; justify-content: space-between; }
+section .txt {font-family: 'KoPubDotumMedium'; padding-top: 330px;}
+section span {font-size: 26px;}
+section .more-bt {margin-top: 130px; display: block; border: 1px solid #707070; padding: 22px 88px;}
+section .more-bt span {}
+
+/* 메인 슬라이더 */
+.main-swiper {position: relative; margin-top: 93px; width: 787px; height: 692px; overflow: hidden;}
+.main-swiper img {height: 100%;}
+.slide .cloud-pic {width: 209px; height: 181px; position: absolute; top: 373px; right: 94px; transform: rotate(284deg);}
+.slide .heart-pic {position: absolute; top: 830px; right: 941px;}
+
+
+/* brand */
+
+section h2 {}
+.brand-box {}
+.brand-box .milk-pepper {}
+.milk-pepper .imgbox {}
+.brand-box span {}

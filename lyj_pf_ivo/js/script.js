@@ -1,7 +1,7 @@
 $(function () {
 
-    // 스와이퍼 시작!
-    const swiper = new Swiper('.main-swiper', {
+    // 메인 비주얼 스와이퍼
+    const swiper1 = new Swiper('.main-swiper', {
         
         direction: 'horizontal',        // 슬라이드 방향 : 'vertical', 'horizontal'
         loop: true,                     // 반복여부
@@ -15,8 +15,16 @@ $(function () {
         slidesPerView: 1,               // 보여지는 슬라이드 개수
         spaceBetween: 0,               // 슬라이드 간 여백
         
-
-        
     });
 
+     // 뉴 아이템 스와이퍼
+     const swiper2 = new Swiper('.new-swiper', {
+        
+        direction: 'horizontal',        // 슬라이드 방향 : 'vertical', 'horizontal'
+        loop: true,                     // 반복여부
+        slidesPerView: 4,               // 보여지는 슬라이드 개수
+        spaceBetween: 0,               // 슬라이드 간 여백
+        
+        
+    });
 })

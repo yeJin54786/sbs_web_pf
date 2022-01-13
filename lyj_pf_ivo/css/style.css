@@ -5,25 +5,42 @@
     font-style: normal;
 }
 
-body {background-color: #DFDCCF;}
 
-header {width: 100%; height: 118px; border: 1px solid #707070; box-sizing: border-box; background-color: #DFDCCF;}
+
+body {background-color: #DFDCCF; font-family: 'KoPubDotumMedium';}
+
+/* header */
+header {width: 100%; height: 118px; border: 1px solid #707070; box-sizing: border-box; background-color: #DFDCCF; border-left: none; border-right: none;}
 .header-wrap {width: 1523px; margin: 0 auto;}
 .header-logo span {display: block; margin-top: 17px; float: left; font-family: 'Titan One'; font-size: 74px; text-transform: capitalize; letter-spacing: -3.7px;}
 
 header nav {float: right; display: flex; margin-top: 44px;}
 header .gnb {display: flex; flex-flow: row nowrap; width: 794px; justify-content: space-between; padding-right: 80px;}
-header .gnb a {font-family: 'KoPubDotumMedium'; font-weight: bold; font-size: 28px; color: #000;}
+header .gnb li {position: relative; display: inline-block;}
+header .gnb > li > a {font-weight: bold; font-size: 28px; color: #000; padding: 43px 20px;}
 header .fa-magnifying-glass {font-size: 30px;}
+
+/* header- drop down */
+header .gnb li:hover .drop-down {display: block;}
+header .drop-down { display: none; background-color: #000; width: 136px; position:absolute; left: -3%; top: 51px; z-index: 3;}
+header .drop-down li {color: #fff; font-size: 20px; padding:12px 17px; display: block;}
+header .drop-down li:nth-child(1) {padding-top:24px ;}
+header .drop-down li:nth-last-child(1) {padding-bottom: 24px;}
+header .drop-down a {display: block;}
+header .drop-down li > a > span {color: #fff; display: inline-block; position: relative;}
+header .drop-down li > a > span::after {content: ''; display: block; width: 100%; height: 0.1rem; position: absolute; left: 0; bottom: -7px; background: #fff; opacity: 0; transition: opacity 1s cubic-bezier(.05,.9,.32,.96);}
+header .drop-down li > a > span:hover::after { opacity: 1;}
+
 
 /* visual */
 section {margin: 0 auto; width: 1523px; margin-top: 76px;}
 section .main-title {position: absolute; z-index: 2; font-family: 'Titan One'; font-size: 111px; letter-spacing: -5.55px;}
 .visual-box {z-index: 1; display: flex; justify-content: space-between; }
-section .txt {font-family: 'KoPubDotumMedium'; padding-top: 330px;}
-section span {font-size: 26px;}
-section .more-bt {margin-top: 130px; display: block; border: 1px solid #707070; padding: 22px 88px;}
+section .txt {padding-top: 330px;}
+section .main-txt {font-size: 26px; margin-bottom: 130px; display: inline-block;}
+section .more-bt { display: block; border: 1px solid #707070; padding: 22px 88px;}
 section .more-bt span {}
+
 
 /* 메인 슬라이더 */
 .main-swiper {position: relative; margin-top: 93px; width: 787px; height: 692px; overflow: hidden;}
@@ -34,8 +51,30 @@ section .more-bt span {}
 
 /* brand */
 
-section h2 {}
-.brand-box {}
-.brand-box .milk-pepper {}
-.milk-pepper .imgbox {}
-.brand-box span {}
+.section-title {font-family: 'Titan One'; font-size:76px; margin: 156px auto 0; text-align: center; }
+.brand-box {display: flex; justify-content: space-between; margin-top: 123px;}
+.brand {text-align: center; font-size: 27px;}
+.brand-logo {height: 83px; text-align: center; display: inline-block; margin-bottom: 60px;}
+.brand-logo img {width: 100%;}
+.milk-pepper .imgbox {box-shadow: -17px 13px 15px rgba(0,0,0,0.3);  width: 672px; height: 586px; background: url("../img/brand-milkpepper.jpg") no-repeat;  background-position: center;}
+.maxbone .imgbox {box-shadow: -17px 13px 15px rgba(0,0,0,0.3); width: 672px; height: 586px; background: url("../img/brand-maxbone.gif") no-repeat; }
+.brand-box .brand-txt {display: block; margin-top: 60px;}
+.brand-box button {text-align: center; display: inline-block; margin-top: 60px;}
+
+
+
+/* new */
+.new-swiper {height: 608px; margin-top: 78px;} 
+.new-slide {}
+.new-slide .img-box1 {width: 335px; height: 419px; background: url(../img/product/macbone-new-itme1.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box1:hover {background: url(../img/product/macbone-new-itme1-fit.jpg) no-repeat; background-size: contain;}
+
+.new-swipwrap span {display: inline-block; font-weight: bold; font-size: 28px; margin-top: 20px;} 
+.new-swipwrap p {font-size: 20px; margin-top: 10px;}
+.swiper-pagination-fraction {font-family: 'KoPubDotumMedium'; font-weight: bold;}
+.swiper-button-prev {left: 596px; top: 900px;}
+.swiper-button-next {right: 596px;}
+
+
+/* brand name slider */
+.marquee-wrap {font-size: 111px; font-family: 'Titan One'; border: 1px solid #000; position: absolute; width: 100%; left: 0; border-left: none; border-right: none; padding: 38px 0 37px;}

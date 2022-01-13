@@ -32,14 +32,28 @@
         <nav>
             <ul class="gnb">
                 <li><a href="">Brand</a>
-                    <!-- <ul class="drop-down">
-                        <li><a href="#"></a>맥스본</li>
-                        <li><a href="#"></a>밀크 앤 페퍼</li>
-                        <li><a href="#"></a>펫 소 시크</li>
-                    </ul> -->
+                    <ul class="drop-down">
+                        <li><a href="#"><span>맥스본</span></a></li>
+                        <li><a href="#"><span>밀크 앤 페퍼</span></a></li>
+                        <li><a href="#"><span>펫 소 시크</span></a></li>
+                    </ul>
                 </li>
-                <li><a href="">Outdoor</a></li>
-                <li><a href="">Indor</a></li>
+                <li><a href="">Outdoor</a>
+                    <ul class="drop-down">
+                        <li><a href="#"><span>스웨터</span></a></li>
+                        <li><a href="#"><span>패딩자켓</span></a></li>
+                        <li><a href="#"><span>후드</span></a></li>
+                        <li><a href="#"><span>레인코트</span></a></li>
+                        <li><a href="#"><span>하네스</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="">Indor</a>
+                    <ul class="drop-down">
+                        <li><a href="#"><span>리빙</span></a></li>
+                        <li><a href="#"><span>장난감</span></a></li>
+                        <li><a href="#"><span>고양이</span></a></li>
+                    </ul>
+                </li>
                 <li><a href="">Ivolog</a></li>
                 <li><a href="">Store</a></li>
             </ul>
@@ -79,12 +93,12 @@
 
 <!-- brand -->
 <section>
-    <h2>Brand</h2>
+    <h2 class="section-title">Brand</h2>
     <div class="brand-box">
         <div class="brand milk-pepper">
             <div class="brand-logo"><img src="img/MILK & PEPPER.svg" alt=""></div>
             <div class="imgbox"></div>
-            <span>일년 내내 우아할 수 있는<br>
+            <span class="brand-txt">일년 내내 우아할 수 있는<br>
                 밀크&페퍼는 세련되고 독창적입니다.<br>
                 계절마다 제안하는 상상력과 영감은<br>
                 최적의스타일리쉬를 제공합니다.
@@ -97,7 +111,7 @@
         <div class="brand maxbone">
             <div class="brand-logo"><img src="img/logo-maxbone.svg" alt=""></div>
             <div class="imgbox"></div>
-            <span>프랑스 파리는 파리지앵의 본고장입니다.<br>
+            <span class="brand-txt">프랑스 파리는 파리지앵의 본고장입니다.<br>
                 이곳에서 시작된 펫 소 시크는<br>
                 우아함, 세련됨, 고상함을 대표하고 흠잡을 데 없는<br>
                 스타일을 연출합니다.
@@ -112,59 +126,28 @@
 
 <!-- new -->
 <section>
-    <h2>New</h2>
-    <div class="new-slider">
-        <div class="swiper new-swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper new-swipwrap">
-                <!-- Slides -->
-                <div class="swiper-slide new-slide">
-                  <img src="img/product/macbone-new-itme1.jpg" alt="">
-                  <span>MAXBONE</span>
-                  <p>맥스본 Arabella Vest baige 아라벨라 패딩 조끼 베이지</p>
-                </div>
-
-                <div class="swiper-slide new-slide">
-                    <img src="img/product/macbone-new-itme1.jpg" alt="">
-                    <span>MAXBONE</span>
-                    <p>맥스본 Arabella Vest baige 아라벨라 패딩 조끼 베이지</p>
-                  </div>
-
-                  <div class="swiper-slide new-slide">
-                    <img src="img/product/macbone-new-itme1.jpg" alt="">
-                    <span>MAXBONE</span>
-                    <p>맥스본 Arabella Vest baige 아라벨라 패딩 조끼 베이지</p>
-                  </div>
-
-                  <div class="swiper-slide new-slide">
-                    <img src="img/product/macbone-new-itme1.jpg" alt="">
-                    <span>MAXBONE</span>
-                    <p>맥스본 Arabella Vest baige 아라벨라 패딩 조끼 베이지</p>
-                  </div>
-
-                  <div class="swiper-slide new-slide">
-                    <img src="img/product/macbone-new-itme1.jpg" alt="">
-                    <span>MAXBONE</span>
-                    <p>맥스본 Arabella Vest baige 아라벨라 패딩 조끼 베이지</p>
-                  </div>
-                  
-                  <div class="swiper-slide new-slide">
-                    <img src="img/product/macbone-new-itme1.jpg" alt="">
-                    <span>MAXBONE</span>
-                    <p>맥스본 Arabella Vest baige 아라벨라 패딩 조끼 베이지</p>
-                  </div>
-
-            </div>
-            <!-- If we need pagination -->
-            <div lang="en" class="swiper-pagination swiper-pagination-fraction">
-                <span class="swiper-pagination-current">01</span> 
-                / <span class="swiper-pagination-total">06</span>
+    <h2 class="section-title">New</h2>
+    <div class="swiper new-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper new-swipwrap">
+            <!-- Slides -->
+            
+            <div class="swiper-slide new-slide">
+                <div class="img-box1"></div>
+                <span>MAXBONE</span>
+                <p>맥스본 Arabella Vest baige 아라벨라 패딩 조끼 베이지</p>
             </div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div lang="en" class="swiper-pagination swiper-pagination-fraction">
+            <span class="swiper-pagination-current">01</span> 
+            / <span class="swiper-pagination-total">06</span>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </section>
 
@@ -172,24 +155,10 @@
 <!-- brand name slider -->
 
 <section>
-    <div class="ctn">
-        <div class="marquee-wrap">
-            <div class="marquee-text1"></div>
-            <div class="marquee-text2"></div>
-            <div class="marquee-text3"></div>
-        </div>
-    </div>
-    
+    <marquee class="marquee-wrap" scrolldelay="5">MILK & PEPPER &nbsp;&nbsp;&nbsp;&nbsp; MAXBONE &nbsp;&nbsp;&nbsp;&nbsp; PET SO CHIC</marquee>
 </section>
 
 
-<div id="sec-1" class="section">
-    <div id="ctn">
-      <div class="marquee">
-        <div class="marquee-text"></div><div class="marquee-text"></div><div class="marquee-text"></div>
-      </div>
-    </div>
-  </div>
 
 
 <!-- best -->

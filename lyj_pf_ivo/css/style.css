@@ -64,17 +64,32 @@ section .more-bt span {}
 
 
 /* new */
-.new-swiper {height: 608px; margin-top: 78px;} 
-.new-slide {}
+.new-swiper {height: 661px; margin-top: 78px;}
+.new-swipwrap {justify-content: space-between;}
 .new-slide .img-box1 {width: 335px; height: 419px; background: url(../img/product/macbone-new-itme1.jpg) no-repeat; background-size: contain;}
 .new-slide .img-box1:hover {background: url(../img/product/macbone-new-itme1-fit.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box2 {width: 335px; height: 419px; background: url(../img/product/mnp-new-item1.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box2:hover {background: url(../img/product/mnp-new-item1-fit.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box3 {width: 335px; height: 419px; background: url(../img/product/mnp-new-item2.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box3:hover {background: url(../img/product/mnp-new-item2-fit.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box4 {width: 335px; height: 419px; background: url(../img/product/macbone-new-itme2.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box4:hover {background: url(../img/product/macbone-new-itme2-fit.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box5 {width: 335px; height: 419px; background: url(../img/product/macbone-new-itme3.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box5:hover {background: url(../img/product/macbone-new-itme3-fit.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box6 {width: 335px; height: 419px; background: url(../img/product/mnp-new-item3.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box6:hover {background: url(../img/product/mnp-new-item3-fit.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box7 {width: 335px; height: 419px; background: url(../img/product/mnp-new-item4.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box7:hover {background: url(../img/product/mnp-new-item4-fit.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box8 {width: 335px; height: 419px; background: url(../img/product/mnp-new-item5.jpg) no-repeat; background-size: contain;}
+.new-slide .img-box8:hover {background: url(../img/product/mnp-new-item5-fit.jpg) no-repeat; background-size: contain;}
+
 
 .new-swipwrap span {display: inline-block; font-weight: bold; font-size: 28px; margin-top: 20px;} 
 .new-swipwrap p {font-size: 20px; margin-top: 10px;}
-.swiper-pagination-fraction {font-family: 'KoPubDotumMedium'; font-weight: bold;}
-.swiper-button-prev {left: 596px; top: 900px;}
-.swiper-button-next {right: 596px;}
-
+.swiper-pagination-fraction {bottom: 25px; font-family: 'KoPubDotumMedium'; font-weight: bold; font-size: 28px; letter-spacing: -1px;}
+.swiper-button-prev {width: 89px; height: 87px; left: 596px; top: 599px; background: url('../img/left-arrow.png') no-repeat; background-size: 100% auto; background-position: center;}
+.swiper-button-next {width: 89px; height: 87px; right: 596px; top: 599px; background:url('../img/right-arrow.png')no-repeat; background-size: 100% auto; background-position: center;}
+.swiper-button-prev::after , .swiper-button-next::after {display: none;}
 
 /* brand name slider */
 .marquee-wrap {font-size: 111px; font-family: 'Titan One'; border: 1px solid #000; position: absolute; width: 100%; left: 0; border-left: none; border-right: none; padding: 38px 0 37px;}

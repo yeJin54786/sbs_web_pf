@@ -1,6 +1,6 @@
 $(function () {
 
-    // 메인 비주얼 스와이퍼
+    // 메인 비주얼 슬라이더
     const swiper1 = new Swiper('.main-swiper', {
         
         direction: 'horizontal',        // 슬라이드 방향 : 'vertical', 'horizontal'
@@ -17,8 +17,8 @@ $(function () {
         
     });
 
-     // 뉴 아이템 스와이퍼
-     const swiper2 = new Swiper('.new-swiper', {
+     // 뉴 아이템 슬라이더
+    const swiper2 = new Swiper('.new-swiper', {
         
         direction: 'horizontal',        // 슬라이드 방향 : 'vertical', 'horizontal'
         loop: true,                     // 반복여부

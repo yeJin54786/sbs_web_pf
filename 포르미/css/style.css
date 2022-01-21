@@ -325,7 +325,150 @@ section.intro .multi-slide {
     box-sizing: 0 0 20px var(--gray-color);
     border: 1px solid black;
 }
-section.intro .multi-slide .left-box {}
+/* 멀티 슬라이드 - 왼쪽영역 */
+section.intro .multi-slide .left-box {
+    position: relative;
+    width: 500px;
+    height: 740px;
+    float: left;
+    overflow: hidden;
+}
+/* 멀티 - 왼쪽영역 네비게이션 */
+section.intro .multi-slide .left-box ul.nav {
+    position: absolute;
+    top: 60px;
+    left: 35px;
+    width: 250px;
+}
+section.intro .multi-slide .left-box ul.nav li {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: var(--gray-color);
+    float: left;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--gray-color);
+    overflow: hidden;
+}
+/* 멀티 - 왼쪽영역 - 네비게이션 (활성화) */
+section.intro .multi-slide .left-box ul.nav li.active {
+    width: 110px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* 멀티 - 왼쪽영역 - 상품 제목*/
+section.intro .multi-slide .left-box .title {
+    position: absolute;
+    top: 185px;
+    left: 52px;
+    width: 400px;
+    font-size: 40px;
+    font-weight: 700;
+}
+section.intro .multi-slide .left-box .title ul {position: relative;}
+section.intro .multi-slide .left-box .title ul li {
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    top: -60px;
+    background-color:var(--white-color);
+    transition: top .5s ease;
+    animation: slideTitle .5s ease;
+    overflow: hidden;
+    display: none;
+}
+
+section.intro .multi-slide .left-box .title ul li.active {
+    display: block;
+    top: 0;
+    transition: top .5s ease;
+    animation: none;
+    z-index: 10;
+}
+
+@keyframes slideTitle {
+    0% { top: -60px; }
+    100% { top: 0; }
+}
+
+/* 멀티 - 왼쪽영역 - 상품설명 */
+section.intro .multi-slide .left-box .info {
+    position: absolute;
+    top: 255px;
+    left: 53px;
+    width: 400px;
+    font-size: 20px;
+    overflow: hidden;
+    color: var(--gray-color);
+}
+
+
+section.intro .multi-slide .left-box .info ul {
+    position: relative;
+    height: 60px;
+}
+
+section.intro .multi-slide .left-box .info ul li {
+    position: absolute;
+    top: -60px;
+    width: 400px;
+    height: 60px;
+    background-color: var(--white-color);
+    transition: top .5s ease;
+    animation: slideTitle .5s ease;
+}
+section.intro .multi-slide .left-box .info ul li.active {
+    width: 400px;
+    height: 60px;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* 멀티 - 왼쪽영역 - 이미지 */
+section.intro .multi-slide .left-box .img {
+    position: absolute;
+    bottom: 0;
+    width: 500px;
+    height: 420px;
+}
+
+section.intro .multi-slide .left-box .img ul {position: relative;}
+section.intro .multi-slide .left-box .img ul li {
+    position: absolute;
+    left: 500px;
+    width: 500px;
+    height: 420px;
+    transition: left 0.5s ease ;
+    animation: slideImg 0.5 ease; 
+}
+
+section.intro .multi-slide .left-box .img ul li.active {
+    left: 0;
+    z-index: 10;
+}
+
+@keyframes slideImg {
+    0% { left: 500px;}
+    90% {left: 0;}
+}
+
+
+
+
+
+
 section.intro .multi-slide .center-box {}
 section.intro .multi-slide .top-box {}
 section.intro .multi-slide .bottom-box {}

@@ -306,11 +306,13 @@ section.best .card .info-box .product-info .price-box .discount {
 /* 섹션 intro - 상품소개 */
 section.intro {
     width: 100% !important;
+    height: auto;
     margin-top: 200px;
     position: relative;
     background: url(../img/main_bg.jpg) center center  no-repeat fixed;
     background-size: cover;
     color: var(--black-color); 
+    padding-bottom: 100px;
 }
 
 /* 섹션 intro - 멀티슬라이드 */
@@ -376,31 +378,33 @@ section.intro .multi-slide .left-box .title {
     font-size: 40px;
     font-weight: 700;
 }
-section.intro .multi-slide .left-box .title ul {position: relative;}
-section.intro .multi-slide .left-box .title ul li {
+section.intro .multi-slide .left-box .title ul { position: relative; }
+
+section.intro .multi-slide .left-box .title ul li { 
     position: absolute;
     width: 400px;
     height: 60px;
     top: -60px;
-    background-color:var(--white-color);
+    background-color: var(--white-color);
     transition: top .5s ease;
     animation: slideTitle .5s ease;
     overflow: hidden;
     display: none;
-}
+}   
 
 section.intro .multi-slide .left-box .title ul li.active {
     display: block;
     top: 0;
     transition: top .5s ease;
-    animation: none;
     z-index: 10;
 }
 
+
 @keyframes slideTitle {
     0% { top: -60px; }
-    100% { top: 0; }
+    90% { top: 0px; }
 }
+
 
 /* 멀티 - 왼쪽영역 - 상품설명 */
 section.intro .multi-slide .left-box .info {
@@ -464,14 +468,350 @@ section.intro .multi-slide .left-box .img ul li.active {
     90% {left: 0;}
 }
 
+section.intro .multi-slide .center-box {
+    position: relative;
+    width: 300px;
+    height: 740px;
+    float: left;
+    overflow: hidden;
+}
+section.intro .multi-slide .center-box ul {}
+section.intro .multi-slide .center-box ul li {
+    position: absolute;
+    width: 300px;
+    height: 740px;
+    left: 300px;
+    transition: left 0.5s ease;
+    animation: centerSlide 0.5s ease;
+}
+
+@keyframes centerSlide {
+    0% { left: 300px; }
+    90% {left: 0;}
+}
+
+section.intro .multi-slide .center-box ul li.active {
+    left: 0;
+}
+
+section.intro .multi-slide .top-box {
+    position: relative;
+    width: 290px;
+    height: 380px;
+    float: left;
+}
+
+section.intro .multi-slide .top-box ul {}
+section.intro .multi-slide .top-box ul li {
+    position: absolute;
+    width: 290px;
+    height: 380px;
+    left: 290px;
+    transition: left 0.5s ease;
+    animation: topSlide 0.5s ease;
+}
+section.intro .multi-slide .top-box ul li.active {
+    left: 0;
+}
+
+@keyframes topSlide {
+    0% { left: 290px; }
+    90% { left: 0; }
+}
 
 
+section.intro .multi-slide .bottom-box {
+    position: relative;
+    width: 290px;
+    height: 360px;
+    float: left;
+}
+
+section.intro .multi-slide .bottom-box .title { 
+    position: absolute;
+    width: 132px;
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: 0  auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+    overflow: hidden;
+}
+section.intro .multi-slide .bottom-box .title ul {
+    height: 24px;
+    overflow: hidden;
+}
+section.intro .multi-slide .bottom-box .title ul li {
+    position: absolute;
+    top: 24px;
+    transition: top 0.5s ease;
+    animation: avgSlide 0.5s ease;
+    background-color: white;
+}
+
+@keyframes avgSlide {
+    0% {top: 24px;}
+    90% {top: 0;}
+}
 
 
+section.intro .multi-slide .bottom-box .title ul li.active {
+    top: 0;
+}
+section.intro .multi-slide .bottom-box .kcal {
+    position: absolute;
+    width: 175px;
+    top: 130px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: -4px;
+    overflow: hidden;
+}
+section.intro .multi-slide .bottom-box .kcal ul {
+    height: 66px;
+    overflow: hidden;
+}
+section.intro .multi-slide .bottom-box .kcal ul li {
+    position: absolute;
+    top: -66px;
+    transition: top 0.5s ease;
+    animation: kaclSlide 0.5s ease;
+    background-color: white;
+}
+@keyframes kaclSlide {
+    0% { top: -66px;}
+    90% {top: 0;}
+}
+section.intro .multi-slide .bottom-box .kcal ul li.active {
+    top: 0;
+}
+section.intro .multi-slide .bottom-box .gram {
+    position: absolute;
+    width: 125px;
+    top: 190px;
+    left: 0;right: 0;
+    margin: auto;
+    font-size: 50px;
+    font-weight: 700;
+    overflow: hidden;
+}
+section.intro .multi-slide .bottom-box .gram ul {
+    height: 72px;
+    overflow: hidden;
+}
+section.intro .multi-slide .bottom-box .gram ul li {
+    position: absolute;
+    top: 72px;
+    transition: top 0.5s ease;
+    animation: gramSlide 0.5s ease;
+    background-color: white;
+}
+section.intro .multi-slide .bottom-box .gram ul li.active {
+    top: 0;
+}
 
-section.intro .multi-slide .center-box {}
-section.intro .multi-slide .top-box {}
-section.intro .multi-slide .bottom-box {}
+@keyframes gramSlide {
+    0% {top: 72px;}
+    90% {top: 0;}
+}
 
 /* 섹션 intro - 6칸 브랜드 소개 영역 */
-section.intro .info {}
+section.intro > .info {
+    position: relative;
+    width: 1090px;
+    height: 491px;
+    margin: 40px auto 120px;
+    background-color: #fff;
+    box-shadow: 0 0 20px var(--gray-color);
+}
+
+section.intro > .info ul {}
+section.intro > .info ul li {
+    width: calc(100%/3);
+    float: left;
+}
+section.intro > .info ul li .img-box {overflow: hidden;}
+section.intro > .info ul li .img-box img {
+    width: 100%;
+    display: block;
+    transition: all 0.5s ease-out;
+}
+/* 사진 마우스 호버 : 확대 */
+section.intro > .info ul li .img-box img:hover {
+    transform: scale(1.1);
+}
+
+section.intro > .info ul li .info-box {
+    padding: 50px;
+    height: 246px;
+    text-align: center;
+    box-sizing: border-box;
+}
+section.intro > .info ul li .info-box .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+section.intro > .info ul li .info-box .desc {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0;
+    color: var(--gray-color);
+    word-break: keep-all;  /* 단어 단위 줄바꿈*/
+}
+
+/* 섹션 - notice */
+section.notice {
+    margin-top: 90px;
+}
+section.notice .area {
+    padding: 50px 0;
+    margin-bottom: 100px;
+}
+section.notice .area .box {
+    float: left;
+    background-color: var(--white-color);
+    position: relative;
+    width: 590px;
+    height: 235px;
+    padding: 20px 30px;
+    border: 1px solid var(--gray-color);
+    box-sizing: border-box;
+}
+section.notice .area .box div > h2 {
+    display: inline-block;
+    color: var(--black-color);
+    border-bottom: 1px solid var(--black-color);
+    font-size: 0.9rem;
+}
+section.notice .area .box div > em {
+    font-size: 2rem;
+    font-weight: 400;
+    /* 전화번호 폰트 가져오기 */
+    display: block;
+    padding-bottom: 10px;
+    color: var(--second-color);
+}
+section.notice .area .box div p strong {
+    width: 2.1rem;
+    color: var(--black-color);
+}
+section.notice .area .box div p {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+}
+
+section.notice .area .box .sub-title {width: 3.5em;}
+section.notice .area .box .value {
+    font-size: 1.2em;
+    color: var(--second-color);
+}
+section.notice .area .box .go {
+    display: inline-block;
+    width: 175px;
+    padding: 0.5em 4em 0.5em 1em;
+    border: 1px solid var(--black-color);
+    font-size: 0.75em;
+    margin-top: 1em;
+    position: relative;
+    background: url(../img/footer_bank_go.gif) top 55% right 1em no-repeat;
+    box-sizing: border-box;
+}
+section.notice .area .box .go .items {
+    position: absolute;
+    width: 175px;
+    left: -1px;
+    background-color: var(--white-color);
+    border: 1px solid var(--black-color);
+    top: 100%;
+    padding: 0.5em 1em;
+    box-sizing: border-box;
+    display: none;
+}
+section.notice .area .box .go .items a {
+    display: block;
+}
+/* 인터넷뱅킹 바로가기 - 마우스 올렸을 때 */
+section.notice .area .box .go:hover .items {
+    display: block;
+}
+
+section.notice .area .small-box {
+    margin-left: 20px;
+    float: left;
+    background-color: var(--white-color);
+    position: relative;
+    width: 285px;
+    height: 235px;
+    padding: 20px 30px;
+    border: 1px  solid var(--gray-color);
+    box-sizing: border-box;
+}
+section.notice .area .small-box h2 {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+section.notice .area .small-box > a {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    color: var(--gray-color);
+}
+section.notice .area .small-box ul {}
+section.notice .area .small-box ul li {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+/* 공지사항, 자주묻는 질문 구분선  */
+section.notice .area .small-box::after {
+    content: '';
+    width: 100%;
+    border-top: 1px solid var(--gray-color);
+    position: absolute;
+    left: 0;
+    top: 70px;
+}
+
+section.notice .area .left {
+    width: 70%;
+    float: left;
+    letter-spacing: -1px;
+}
+section.notice .area .left ul {}
+section.notice .area .left ul li {
+    display: inline-block;
+    margin-right: 1em;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+section.notice .area .left ul li strong {
+    font-weight: 400;
+}
+section.notice .area .right {
+    float: right;
+}
+section.notice .area .right a {
+    font-size: 16px;
+    padding: 7px 15px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    position: relative;
+    top: 7px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+section.notice .area .right a:hover {
+    color: var(--primary-color);
+}
+
+section.notice .area .right a span {
+    font-size: 11px;
+}

@@ -1,3 +1,7 @@
+
+let index = 0   // 멀티슬라이드 순서
+let pause = false // 멀티슬라이드 일시중지 , true이면 일시중지
+
 $(function() {
 
     // 메인 슬라이드
@@ -47,27 +51,75 @@ $(function() {
     // 3초마다 멀티 슬라이드 타이머 적용
     let slide = setInterval(multSlide, 3000)
 
+
+    // 멀티 슬라이드 네비게이션 
+    $('.left-box .nav li').on('click', function() {
+        //index () : 해당요소의 순서를 출력
+        let num = $(this).index()
+        index = num
+        pause = false // 슬라이드 일시중지 해제
+        multSlide()
+        pause = true // 슬라이드 일시중지
+
+        // 3초 후에 일시중지 해제
+        setTimeout(function() {
+            pause = false
+        },3000)
+    })
+
+
 })
 
+
+
 // 슬라이드
-let index = 0
+
 function multSlide() {
+
+    
+    if( pause )
+        return; // 함수 종료
+
     index++
 
+    // left-box - 네비게이션
+    $('.left-box .nav li').removeClass('active')
+    $('.left-box .nav li:nth-child(' + index + ')').addClass('active')
 
-    //상품 제목
+    // left-box - 상품 제목
     $('.left-box .title ul li').removeClass('active')
     $('.left-box .title ul li:nth-child(' + index + ')').addClass('active')
 
-    //상품 설명
+    // left-box -  상품 설명
     $('.left-box .info ul li').removeClass('active')
     $('.left-box .info ul li:nth-child(' + index + ')').addClass('active')
 
-    //상품 이미지
+    // left-box - 상품 이미지
     $('.left-box .img ul li').removeClass('active')
     $('.left-box .img ul li:nth-child(' + index + ')').addClass('active')
 
+    // center-box 
+    $('.center-box ul li').removeClass('active')
+    $('.center-box ul li:nth-child(' + index + ')').addClass('active')
 
+
+    // tob-box
+    $('.top-box ul li').removeClass('active')
+    $('.top-box ul li:nth-child(' + index + ')').addClass('active')
+
+    
+    // bottom-box - title 
+    $('.bottom-box .title ul li').removeClass('active')
+    $('.bottom-box .title ul li:nth-child(' + index + ')').addClass('active')
+
+
+    // bottom-box - kcal
+    $('.bottom-box .kcal ul li').removeClass('active')
+    $('.bottom-box .kcal ul li:nth-child(' + index + ')').addClass('active')
+    
+    // bottom-box - gram
+    $('.bottom-box .gram ul li').removeClass('active')
+    $('.bottom-box .gram ul li:nth-child(' + index + ')').addClass('active')
 
 
     if( index == 4 )

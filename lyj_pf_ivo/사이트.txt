@@ -1,2 +1,0 @@
-https://youtu.be/6-bGYmRSnYI
-순수 자바스크립트 vanilar javascript 마우스를 올리면 따라다니는 메뉴바 애니메이션

@@ -11,6 +11,10 @@
     --gray-color: #9b9992;
 }
 
+/* 스크롤 부드럽게 움직이기 */
+html {scroll-behavior: smooth;}
+
+
 body {font-family: 'Noto Sans KR', sans-serif;}
 
 /* 전체영역 */
@@ -159,7 +163,7 @@ header #gnb_wrap #gnb .gnb_right li {float: left; height: 100%;}
 
 /* 섹션 visual (이미지 슬라이드) */
 section.visual {
-    width: 1920px;
+    /* width: 1920px; */
     margin: 0 auto;
 }
 
@@ -325,7 +329,6 @@ section.intro .multi-slide {
     overflow: hidden;
     background-color: var(--white-color);
     box-sizing: 0 0 20px var(--gray-color);
-    border: 1px solid black;
 }
 /* 멀티 슬라이드 - 왼쪽영역 */
 section.intro .multi-slide .left-box {
@@ -815,3 +818,51 @@ section.notice .area .right a:hover {
 section.notice .area .right a span {
     font-size: 11px;
 }
+
+
+/* footer */
+footer { font-size: 0.85em; text-align: center; line-height: 130px;}
+footer ul {display: inline;}
+footer ul li {display: inline-block;}
+footer ul li em {}
+footer ul li a {column-rule: var(--gray-color);}
+
+/* footer 구분선 */
+footer ul li a::after {
+    content: '';
+    column-rule: var(--gray-color);
+    display: inline-block;
+    height: 0.8em;
+    width: 1px;
+    border-right: 1px solid var(--gray-color);
+    margin: 0 1em;
+}
+
+footer ul li a.last::after {display: none;}
+
+
+/* 플로팅 버튼 - 마스코트 */
+.float-banner {
+    position: fixed;    /*브라우저 기준으로 위치*/ 
+    left: 2rem;
+    bottom: 2rem;
+    z-index: 900;
+}
+.float-banner img {width: 100%;}
+
+
+/* 플로팅 버튼 - 마스코트 */
+.quick-menu {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid var(--gray-color);
+    background-color: var(--white-color);
+    z-index: 1000;
+}
+.quick-menu a {
+    display: block;
+    border-bottom: 1px solid var(--gray-color);
+}
+.quick-menu a img {width: 100%;}

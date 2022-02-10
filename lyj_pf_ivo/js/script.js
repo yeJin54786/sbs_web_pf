@@ -114,13 +114,21 @@ $(function () {
 
     
     // video 클릭 - 비디오 모달
+    var iframe = $('#modal-video')
+    var player = new Vimeo.Player(iframe)
+
     $('#video1').on('click', function() {
         $('.video-modal').css("display", "block")
+
+        player.play();
+
     })
     
     // 비디오 모달 x, 여백 클릭
     $('.modal-close a, .video-modal').on('click', function() {
         $('.video-modal').css("display", "none")
+
+        player.pause(); 
     })
     
 
